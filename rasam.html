@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>صفحة ويب بسيطة</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <button onclick="setColor('red')">أحمر</button>
+    <button onclick="setColor('blue')">أزرق</button>
+    <button onclick="setColor('green')">أخضر</button>
+    <button onclick="resetColors()">إعادة</button>
+
+    <script>
+        function setColor(color) {
+            var boxes = document.getElementsByClassName('box');
+            for (var i = 0; i < boxes.length; i++) {
+                boxes[i].style.backgroundColor = color;
+            }
+        }
+
+        function resetColors() {
+            var boxes = document.getElementsByClassName('box');
+            for (var i = 0; i < boxes.length; i++) {
+                boxes[i].style.backgroundColor = 'white';
+            }
+        }
+    </script>
+</body>
+
+</html>
